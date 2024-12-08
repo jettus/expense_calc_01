@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Daily Expenses</title>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/api.js"></script>
 </head>
 <body>
-    <h1>Update Daily Expenses</h1>
-    <form id="expenseForm">
-        <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date" required><br><br>
+    <div id="app">
+        <h1>Expense Tracker</h1>
+        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-        <label for="expenseName">Expense Name:</label><br>
-        <input type="text" id="expenseName" name="expenseName" required><br><br>
+        <form id="expense_form">
+            <input type="text" id="date" placeholder="Date (YYYY-MM-DD)" required>
+            <input type="text" id="expense_name" placeholder="Expense Name" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
 
-        <label for="category">Category:</label><br>
-        <input type="text" id="category" name="category" required><br><br>
+        <p id="status_message"></p>
+    </div>
 
-        <label for="amount">Amount:</label><br>
-        <input type="number" id="amount" name="amount" required><br><br>
-
-        <button type="button" onclick="submitExpense()">Submit</button>
-    </form>
     <script src="script.js"></script>
 </body>
 </html>
