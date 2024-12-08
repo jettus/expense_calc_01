@@ -13,7 +13,7 @@ async function submitExpense() {
 
     const sheetId = "1UxbmDQ07EWTADuFcecBe180Snxai4DFGgm6P8jJyTC8"; // Replace with your actual sheet ID
     const apiKey = "AIzaSyA-SC7BLxz3O6E8ujhcm-DNzw2OID7pP_8"; // Replace with your API Key
-    const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A1:D1:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
+    const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Daily_Expenses!A1:D1:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
 
     const data = {
         values: [[date, expenseName, category, parseFloat(amount)]]
